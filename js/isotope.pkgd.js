@@ -1,18 +1,4 @@
-/*!
- * Isotope PACKAGED v3.0.6
- *
- * Licensed GPLv3 for open source use
- * or Isotope Commercial License for commercial use
- *
- * https://isotope.metafizzy.co
- * Copyright 2010-2018 Metafizzy
- */
 
-/**
- * Bridget makes jQuery widgets
- * v2.0.1
- * MIT license
- */
 
 /* jshint browser: true, strict: true, undef: true, unused: true */
 
@@ -152,13 +138,8 @@ return jQueryBridget;
 
 }));
 
-/**
- * EvEmitter v1.1.0
- * Lil' event emitter
- * MIT License
- */
 
-/* jshint unused: true, undef: true, strict: true */
+
 
 ( function( global, factory ) {
   // universal module definition
@@ -344,10 +325,6 @@ function getZeroSize() {
 
 // -------------------------- getStyle -------------------------- //
 
-/**
- * getStyle, get style of element, check for Firefox bug
- * https://bugzilla.mozilla.org/show_bug.cgi?id=548397
- */
 function getStyle( elem ) {
   var style = getComputedStyle( elem );
   if ( !style ) {
@@ -364,11 +341,6 @@ var isSetup = false;
 
 var isBoxSizeOuter;
 
-/**
- * setup
- * check isBoxSizerOuter
- * do on first getSize() rather than on page load for Firefox bug
- */
 function setup() {
   // setup once
   if ( isSetup ) {
@@ -378,10 +350,6 @@ function setup() {
 
   // -------------------------- box sizing -------------------------- //
 
-  /**
-   * Chrome & Safari measure the outer-width on style.width on border-box elems
-   * IE11 & Firefox<29 measures the inner-width
-   */
   var div = document.createElement('div');
   div.style.width = '200px';
   div.style.padding = '1px 2px 3px 4px';
@@ -473,13 +441,6 @@ return getSize;
 
 });
 
-/**
- * matchesSelector v2.0.2
- * matchesSelector( element, '.selector' )
- * MIT license
- */
-
-/*jshint browser: true, strict: true, undef: true, unused: true */
 
 ( function( window, factory ) {
   /*global define: false, module: false */
@@ -527,12 +488,6 @@ return getSize;
 
 }));
 
-/**
- * Fizzy UI utils v2.0.7
- * MIT license
- */
-
-/*jshint browser: true, undef: true, unused: true, strict: true */
 
 ( function( window, factory ) {
   // universal module definition
@@ -714,7 +669,7 @@ utils.docReady = function( callback ) {
 
 // ----- htmlInit ----- //
 
-// http://jamesroberts.name/blog/2010/02/22/string-functions-for-javascript-trim-to-camel-case-to-dashed-and-to-underscore/
+//
 utils.toDashed = function( str ) {
   return str.replace( /(.)([A-Z])/g, function( match, $1, $2 ) {
     return $1 + '-' + $2;
@@ -722,11 +677,7 @@ utils.toDashed = function( str ) {
 };
 
 var console = window.console;
-/**
- * allow user to initialize classes via [data-namespace] or .js-namespace class
- * htmlInit( Widget, 'widgetName' )
- * options are parsed from data-namespace-options
- */
+
 utils.htmlInit = function( WidgetClass, namespace ) {
   utils.docReady( function() {
     var dashedNamespace = utils.toDashed( namespace );
@@ -769,13 +720,9 @@ return utils;
 
 }));
 
-/**
- * Outlayer Item
- */
 
 ( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */ /* globals define, module, require */
+
   if ( typeof define == 'function' && define.amd ) {
     // AMD - RequireJS
     define( 'outlayer/item',[
